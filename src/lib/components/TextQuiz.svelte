@@ -18,14 +18,12 @@
 
   const startGame = async () => {
     if (currentGame.isPlaying) {
-      // const parsedData = JSON.parse(data.data);
-      // imData.set(parsedData);
-      // await textQuiz(parsedData);
       console.log('reloading')
       reloadGame();
     } else {
       const parsedData = JSON.parse(data.data);
       imData.set(parsedData);
+      console.log(imData)
       await textQuiz(parsedData);
     }
   };

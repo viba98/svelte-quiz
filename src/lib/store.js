@@ -19,7 +19,7 @@ export const durationOut = writable(600);
 export const isPlaying = writable(false);
 export const timeout = writable(false);
 export const showStats = writable(false);
-export const imData = writable([]);
+export const imData = writable([{}]);
 
 export let autoNext = () => {
   timeout.set(true);

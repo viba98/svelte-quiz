@@ -1,4 +1,5 @@
 <script lang="ts">
+    import { showStats } from "../store";
   export let title: string;
 </script>
 
