@@ -26,11 +26,12 @@ const textData: { data: string } = {"data": '[{"question":"What is the point of 
 ```
 
 ## Image Quiz Component
+![alt text](ImageQuiz.png)
 To use the Image Quiz component, import it and provide the data for the questions. The data should be formatted as an object with a "data" property that contains an array of question objects. Each question object should have an "imageUrl" property, a "answer" property, and an "answer" property.
 
 Here's an example:
 
-`
+```
 <script>
   import { ImageQuiz } from "svelte-survey-test";
 
@@ -38,7 +39,7 @@ Here's an example:
 </script>
 
 <ImageQuiz data={imageData} />
-`
+```
 
 # Contributing
 Contributions are welcome! If you find a bug or have a feature request, please open an issue or submit a pull request.
