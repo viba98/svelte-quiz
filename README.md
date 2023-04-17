@@ -10,6 +10,7 @@ To install the library, run the following command:
 
 ## Text Quiz Component
 ![alt text](TextQuiz.png)
+_image is represntative, CSS hasn't been completed yet!_
 To use the Text Quiz component, import it and provide the data for the questions. The data should be formatted as an object with a "data" property that contains an array of question objects. Each question object should have an "answer" property and a "question" property.
 
 Here's an example:
@@ -27,6 +28,7 @@ const textData: { data: string } = {"data": '[{"question":"What is the point of 
 
 ## Image Quiz Component
 ![alt text](ImageQuiz.png)
+_image is represntative, CSS hasn't been completed yet!_
 To use the Image Quiz component, import it and provide the data for the questions. The data should be formatted as an object with a "data" property that contains an array of question objects. Each question object should have an "imageUrl" property, a "answer" property, and an "answer" property.
 
 Here's an example:
