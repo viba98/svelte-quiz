@@ -3,7 +3,7 @@ import { updateGame, numberOfQuestions } from "./repository";
 import { shuffle } from "./helpers";
 
 function createOptions(obj) {
-  const image = obj.image
+  const question = obj.question
   const answer = obj.answer
   const wrongOp1 = obj.wrongOp1
   const wrongOp2 = obj.wrongOp2
@@ -11,15 +11,15 @@ function createOptions(obj) {
 
   try {
     const wrongOptions = [
-      { correct: false, opt: wrongOp1, imageUrl: image },
-      { correct: false, opt: wrongOp2, imageUrl: image },
-      { correct: false, opt: wrongOp3, imageUrl: image },
+      { correct: false, opt: wrongOp1, imageUrl: question },
+      { correct: false, opt: wrongOp2, imageUrl: question },
+      { correct: false, opt: wrongOp3, imageUrl: question },
     ];
 
     const correctOption = {
       correct: true,
       opt: answer,
-      imageUrl: image,
+      imageUrl: question,
     };
 
     var orderedOptions = [...wrongOptions, correctOption]

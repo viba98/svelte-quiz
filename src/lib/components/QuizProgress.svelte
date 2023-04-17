@@ -33,12 +33,12 @@
 <style>
   .progress-container {
     left: 0;
-    width: 100%;
-    height: 0.8em;
+    width: 75%;
+    height: 8px;
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin: 0.1em 0;
+    margin: 0 8px 8px 8px;
   }
 
   .steps {
@@ -61,18 +61,18 @@
 
   .current {
     transition: all 0.25s ease-in-out;
-    background: rgba(255, 255, 255, 0.95);
-    filter: saturate(60%);
+    background: #6959EA;
+opacity: 0.2;
     cursor: pointer;
   }
 
   .right {
-    background-color: rgb(89, 195, 100);
+    background: #6959EA;
     cursor: pointer;
   }
 
   .wrong {
-    background-color: rgb(200, 45, 81);
+    background: #6959EA;
     cursor: pointer;
   }
 </style>

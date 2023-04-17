@@ -1,58 +1,46 @@
-# create-svelte
+# Svelte Survey 
+Svelte Survey is a component library that allows you to easily create quizzes using Svelte. It includes two quiz options: Text Quizzes and Image Quizzes. All the components and logic are built, so all you need to do is provide the data for the questions.
 
-Everything you need to build a Svelte library, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+# Installation
+To install the library, run the following command:
 
-Read more about creating a library [in the docs](https://kit.svelte.dev/docs/packaging).
+`npm i svelte-survey-test`
 
-## Creating a project
+# Usage
 
-If you're seeing this, you've probably already done this step. Congrats!
+## Text Quiz Component
+To use the Text Quiz component, import it and provide the data for the questions. The data should be formatted as an object with a "data" property that contains an array of question objects. Each question object should have an "answer" property and a "question" property.
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+Here's an example:
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+`
+<script>
+  import { TextQuiz } from "svelte-survey-test";
 
-## Developing
+const textData: { data: string } = {"data": '[{"question":"What is the point of anything?","answer":"idfk","wrongOp1":"poodle","wrongOp2":"fsdf sdf s","wrongOp3":"fsdfsd fsd"},{"question":"https://images.dog.ceo/breeds/chihuahua/n02085620_2650.jpg","answer":"chihuahua","wrongOp1":"fsdfsdfs","wrongOp2":"poodle","wrongOp3":"fsdfsdfsd"},{"question":"https://images.dog.ceo/breeds/hound-walker/n02089867_3177.jpg","answer":"hound-walker","wrongOp1":"fsdfsdfsdf","wrongOp2":"poodle","wrongOp3":"fsdfsdfsdfs"},{"question":"https://images.dog.ceo/breeds/spaniel-welsh/n02102177_707.jpg","answer":"spaniel-welsh","wrongOp1":"poofsdfsdfdle","wrongOp2":"fsdfsdfs fsd fsd ","wrongOp3":"fsdfsd fsd f "}]'};
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+</script>
 
-```bash
-npm run dev
+<TextQuiz data={textData} />
+`
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+## Image Quiz Component
+To use the Image Quiz component, import it and provide the data for the questions. The data should be formatted as an object with a "data" property that contains an array of question objects. Each question object should have an "imageUrl" property, a "answer" property, and an "answer" property.
 
-Everything inside `src/lib` is part of your library, everything inside `src/routes` can be used as a showcase or preview app.
+Here's an example:
 
-## Building
+`
+<script>
+  import { ImageQuiz } from "svelte-survey-test";
 
-To build your library:
+  const imageData: { data: string } = {"data": '[{"image": "https://images.dog.ceo/breeds/poodle-miniature/n02113712_3203.jpg", "answer": "poodle" },{"image": "https://images.dog.ceo/breeds/chihuahua/n02085620_2650.jpg", "answer": "chihuahua"},{"image": "https://images.dog.ceo/breeds/hound-walker/n02089867_3177.jpg", "answer": "hound-walker"},{"image": "https://images.dog.ceo/breeds/spaniel-welsh/n02102177_707.jpg", "answer": "spaniel-welsh"}]'};
+</script>
 
-```bash
-npm run package
-```
+<ImageQuiz data={imageData} />
+`
 
-To create a production version of your showcase app:
+# Contributing
+Contributions are welcome! If you find a bug or have a feature request, please open an issue or submit a pull request.
 
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
-
-## Publishing
-
-Go into the `package.json` and give your package the desired name through the `"name"` option. Also consider adding a `"license"` field and point it to a `LICENSE` file which you can create from a template (one popular option is the [MIT license](https://opensource.org/license/mit/)).
-
-To publish your library to [npm](https://www.npmjs.com):
-
-```bash
-npm publish
-```
+# License
+Svelte Survey is MIT licensed.

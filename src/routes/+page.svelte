@@ -4,7 +4,7 @@ import TextQuiz from "../lib/components/TextQuiz.svelte";
 
 // const imageData: { data: string } = {"data": '[{"image": "https://images.dog.ceo/breeds/poodle-miniature/n02113712_3203.jpg", "answer": "poodle" },{"image": "https://images.dog.ceo/breeds/chihuahua/n02085620_2650.jpg", "answer": "chihuahua"},{"image": "https://images.dog.ceo/breeds/hound-walker/n02089867_3177.jpg", "answer": "hound-walker"},{"image": "https://images.dog.ceo/breeds/spaniel-welsh/n02102177_707.jpg", "answer": "spaniel-welsh"}]'};
 
-const textData: { data: string } = {"data": '[{"image":"https://images.dog.ceo/breeds/poodle-miniature/n02113712_3203.jpg","answer":"idfk","wrongOp1":"poodle","wrongOp2":"fsdf sdf s","wrongOp3":"fsdfsd fsd"},{"image":"https://images.dog.ceo/breeds/chihuahua/n02085620_2650.jpg","answer":"chihuahua","wrongOp1":"fsdfsdfs","wrongOp2":"poodle","wrongOp3":"fsdfsdfsd"},{"image":"https://images.dog.ceo/breeds/hound-walker/n02089867_3177.jpg","answer":"hound-walker","wrongOp1":"fsdfsdfsdf","wrongOp2":"poodle","wrongOp3":"fsdfsdfsdfs"},{"image":"https://images.dog.ceo/breeds/spaniel-welsh/n02102177_707.jpg","answer":"spaniel-welsh","wrongOp1":"poofsdfsdfdle","wrongOp2":"fsdfsdfs fsd fsd ","wrongOp3":"fsdfsd fsd f "}]'};
+const textData: { data: string } = {"data": '[{"question":"What is the point of anything?","answer":"idfk","wrongOp1":"poodle","wrongOp2":"fsdf sdf s","wrongOp3":"fsdfsd fsd"},{"question":"https://images.dog.ceo/breeds/chihuahua/n02085620_2650.jpg","answer":"chihuahua","wrongOp1":"fsdfsdfs","wrongOp2":"poodle","wrongOp3":"fsdfsdfsd"},{"question":"https://images.dog.ceo/breeds/hound-walker/n02089867_3177.jpg","answer":"hound-walker","wrongOp1":"fsdfsdfsdf","wrongOp2":"poodle","wrongOp3":"fsdfsdfsdfs"},{"question":"https://images.dog.ceo/breeds/spaniel-welsh/n02102177_707.jpg","answer":"spaniel-welsh","wrongOp1":"poofsdfsdfdle","wrongOp2":"fsdfsdfs fsd fsd ","wrongOp3":"fsdfsd fsd f "}]'};
 </script>
 
 
@@ -28,16 +28,16 @@ const textData: { data: string } = {"data": '[{"image":"https://images.dog.ceo/b
       gtag("config", "G-P2FJLM58FS");
     </script>
   </head>
-  <body class="game">
+  <!-- <body class="game"> -->
     <!-- <ImageQuiz data = {imageData} baseQuestion = "IDFK" title="Title"  numOfQuestions = {3}/> -->
     <TextQuiz data = {textData} title="Title" numOfQuestions = {3}/>
-  </body>
+  <!-- </body> -->
 </html>
 
 <style>
-  .game {
+  /* .game {
     display: flex;
     justify-content: flex-start;
     height: 100vh;
-  }
+  } */
 </style>

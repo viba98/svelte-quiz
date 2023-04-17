@@ -18,26 +18,25 @@
 
 <style>
   .option {
+    font-family: 'DM Sans';
     position: relative;
     cursor: pointer;
-    background-color: #fafaff;
     border-radius: 1em;
     transition: all 0.2s ease-in-out;
     padding: 0.3em 0;
-    color: #37383a;
     width: 80%;
     max-width: 27em;
     height: auto;
-    font-size: 2.8em;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 23px;
+    line-height: 30px;
     margin: 0.5em 0;
+  }
 
-    /* &:last-child {
-      margin-bottom: 3em;
-    }
-
-    &:hover {
-      transform: scale(101.3%);
-    } */
+  .option:hover{
+    background: rgba(105, 89, 234, 0.02);
+    border: 1px solid rgba(105, 89, 234, 0.1);
   }
 
   .correct {
@@ -57,27 +56,4 @@
   .text {
     padding-left: 1rem;
   }
-/* 
-  @keyframes shake {
-    10%,
-    90% {
-      transform: translate3d(-1px, 0, 0);
-    }
-
-    20%,
-    80% {
-      transform: translate3d(2px, 0, 0);
-    }
-
-    30%,
-    50%,
-    70% {
-      transform: translate3d(-4px, 0, 0);
-    }
-
-    40%,
-    60% {
-      transform: translate3d(4px, 0, 0);
-    }
-  } */
 </style>

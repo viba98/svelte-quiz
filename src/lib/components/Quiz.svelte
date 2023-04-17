@@ -57,7 +57,7 @@
 </div>
 
 <style>
-  .quiz {
+  /* .quiz {
     margin-top: 2em;
-  }
+  } */
 </style>
