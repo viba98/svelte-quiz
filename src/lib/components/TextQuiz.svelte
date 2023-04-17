@@ -16,16 +16,19 @@
   export let title: string;
 
   export let numOfQuestions;
-  
+
   const startGame = async () => {
     if (currentGame.isPlaying) {
-      console.log('reloading')
-      reloadGame();
+      numQ.set(numOfQuestions)
+      const parsedData = JSON.parse(data.data);
+      imData.set(parsedData);
+      await textQuiz(parsedData);
+      // console.log('reloading')
+      // reloadGame();
     } else {
       numQ.set(numOfQuestions)
       const parsedData = JSON.parse(data.data);
       imData.set(parsedData);
-      console.log(imData)
       await textQuiz(parsedData);
     }
   };

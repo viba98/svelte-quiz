@@ -4,7 +4,7 @@ import { shuffle } from "./helpers";
 
 function createOptions(obj) {
   const image = obj.image
-  const breed = obj.breed
+  const breed = obj.answer
   const wrongOp1 = obj.wrongOp1
   const wrongOp2 = obj.wrongOp2
   const wrongOp3 = obj.wrongOp3
