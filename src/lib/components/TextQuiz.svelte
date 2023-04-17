@@ -18,6 +18,9 @@
 
   const startGame = async () => {
     if (currentGame.isPlaying) {
+      // const parsedData = JSON.parse(data.data);
+      // imData.set(parsedData);
+      // await textQuiz(parsedData);
       console.log('reloading')
       reloadGame();
     } else {
@@ -47,7 +50,7 @@
   {:else}
     <div class="game" in:fade={{ duration: 1500 }}>
       <QuizProgress />
-      <Quiz questionType = "text"/>
+      <Quiz questionType = "text"  baseQuestion = ""/>
     </div>
   {/if}
 </div>

@@ -10,7 +10,6 @@
     durationIn,
     quiz,
     autoNext,
-    timeout,
   } from "../store";
     import TextQuestion from "./TextQuestion.svelte";
 
@@ -62,29 +61,18 @@
 <svelte:window bind:innerWidth bind:innerHeight />
 
 {#if $quizIndex === index}
-  {#if $quizIndex >= 1}
-    <div in:fade={{ duration: $durationIn }}>
-      <!-- <Arrow direction="left" /> -->
-    </div>
-  {/if}
-
-  {#if hasAnswered && !$timeout}
-    <div in:fade={{ duration: $durationIn }}>
-      <!-- <Arrow direction="right" /> -->
-    </div>
-  {/if}
-
   <div class="question" in:fade={{ duration: $durationIn }}>
     {#if questionType === "image"}
       <div class="image">
         <ImageQuestion image = {image} />
+        <div class="center">
+          <h3>{baseQuestion}</h3>
+        </div>
       </div>
     {:else if questionType === "text"}
       <TextQuestion content = {image}/>
     {/if}
-    <div class="center">
-      <h3>{baseQuestion}</h3>
-    </div>
+    
     {#each options as option}
       <Option
         {...option}
@@ -100,11 +88,6 @@
       />
     {/each}
   </div>
-  {#if hasAnswered && isCorrect && animate}
-    <div class="animation" style="top: {positionY}px;">
-
-    </div>
-  {/if}
 {/if}
 
 <style>
@@ -130,12 +113,5 @@
     justify-content: space-evenly;
     align-items: center;
     height: 100%;
-  }
-
-  .animation {
-    position: absolute;
-    z-index: 10;
-    transform: translate(-50%, -50%);
-    left: 50%;
   }
 </style>

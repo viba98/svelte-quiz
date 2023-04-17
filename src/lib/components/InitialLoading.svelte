@@ -13,7 +13,7 @@
 <svelte:window bind:innerWidth bind:innerHeight />
 
 <div class="loading">
-  <p>Woofing Up Our Quiz!</p>
+  <p>Starting the Quiz!</p>
 </div>
 
 <style>
