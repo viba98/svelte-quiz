@@ -22,7 +22,6 @@ const buildOptions = (correctImageUrl, data) => {
   const uniqoptions = [...new Set(breeds)];
   const key = data.find((key) => key.image === correctImageUrl);
   const correctBreed = key.breed;
-  console.log(correctBreed)
   const wrongImages = uniqoptions
     .filter((breed) => breed !== correctBreed)
     .splice(0, 3)
@@ -57,7 +56,6 @@ const buildQuiz = async (data) => {
         Math.floor(Math.random() * images.length),
         1
       );
-      console.log(randomElement)
       const question = {
         options: buildOptions(randomElement, data),
         image: await preload(randomElement),
@@ -68,7 +66,6 @@ const buildQuiz = async (data) => {
         items.push(question);
         return items;
       });
-      console.log(question.options)
       questionIndex += 1;
       isPlaying.set(true);
       loading.set(false);

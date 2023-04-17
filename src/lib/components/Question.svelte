@@ -78,6 +78,7 @@
         {...option}
         on:click={(e) => {
           selectedOption = option;
+          console.log(selectedOption)
           answer(e);
         }}
         answered={selectedOption.breed === option.breed && hasAnswered}

@@ -24,9 +24,6 @@ function createOptions(obj) {
 
     var orderedOptions = [...wrongOptions, correctOption]
     var options = shuffle(orderedOptions);
-    console.log("options", options)
-    console.log("idk", correctOption, ...wrongOptions )
-    // return [ ...wrongOptions, correctOption ];
     return options;
     } catch (error) {
       console.error(`error while creating options: ${error}`);
@@ -40,7 +37,6 @@ const buildTextQuiz = async (data) => {
   try {
     while (questionIndex < numberOfQuestions) {
       const options = await createOptions(data[questionIndex]);
-      console.log("options", options)
       const correctIndex = options.findIndex((option) => option.correct === true);
       const question = {
         options,

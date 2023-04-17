@@ -30,7 +30,7 @@
   };
 
   onMount(() => {
-    console.log('mounted' + title)
+    console.log('mounted')
     startGame();
   });
 </script>

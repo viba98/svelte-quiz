@@ -14,7 +14,6 @@ export const numQ = writable(2);
 
 numQ.subscribe(value => {
   numberOfQuestions = value;
-  console.log("numOfQuestions", numberOfQuestions)
 })
 
 const defaultStreaks = [...Array(numberOfQuestions + 1).keys()].map((v) => {

@@ -21,8 +21,6 @@ export const timeout = writable(false);
 export const showStats = writable(false);
 export const imData = writable([{}]);
 
-console.log("numberOfQ from store", numberOfQuestions)
-
 export let autoNext = () => {
   timeout.set(true);
   setTimeout(goToNext, 1500);
@@ -70,7 +68,6 @@ export const reset = () => {
   finished.set(false);
   showStats.set(false);
   imData.subscribe(value => {
-    console.log("value");
     guessImage(value);
   });
 };
@@ -84,7 +81,6 @@ export const reset2 = () => {
   finished.set(false);
   showStats.set(false);
   imData.subscribe(value => {
-    console.log("value", value);
     textQuiz(value);
   });
 };
