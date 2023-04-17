@@ -42,7 +42,6 @@ export let currentGame = JSON.parse(typeof localStorage !== 'undefined' && local
 export let stats = () => JSON.parse(typeof localStorage !== 'undefined' && localStorage.getItem("stats"));
 
 export const updateGame = () => {
-  console.log("updating game")
   const game = {
     quiz: get(quiz),
     quizIndex: get(quizIndex),

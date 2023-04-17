@@ -4,21 +4,21 @@ import { shuffle } from "./helpers";
 
 function createOptions(obj) {
   const image = obj.image
-  const breed = obj.answer
+  const answer = obj.answer
   const wrongOp1 = obj.wrongOp1
   const wrongOp2 = obj.wrongOp2
   const wrongOp3 = obj.wrongOp3
 
   try {
     const wrongOptions = [
-      { correct: false, breed: wrongOp1, imageUrl: image },
-      { correct: false, breed: wrongOp2, imageUrl: image },
-      { correct: false, breed: wrongOp3, imageUrl: image },
+      { correct: false, opt: wrongOp1, imageUrl: image },
+      { correct: false, opt: wrongOp2, imageUrl: image },
+      { correct: false, opt: wrongOp3, imageUrl: image },
     ];
 
     const correctOption = {
       correct: true,
-      breed: breed,
+      opt: answer,
       imageUrl: image,
     };
 
@@ -32,7 +32,6 @@ function createOptions(obj) {
 }
 
 const buildTextQuiz = async (data) => {
-  console.log('start builTextQuiz')
   let questionIndex = 0;
   try {
     while (questionIndex < numberOfQuestions) {

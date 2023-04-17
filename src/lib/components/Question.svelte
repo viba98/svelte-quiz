@@ -24,12 +24,12 @@
   let animate = false;
 
   $: hasAnswered = answered;
-  $: selectedOption = { breed: null, correct: null };
+  $: selectedOption = { opt: null, correct: null };
   $: innerWidth = 0;
   $: innerHeight = 0;
   $: isCorrect = null;
   $: positionY = 0;
-  $: currentAnswer = $answers[$quizIndex] || { breed: null, correct: null };
+  $: currentAnswer = $answers[$quizIndex] || { opt: null, correct: null };
 
   if (innerWidth > 760) {
     animationHeight = animationHeight * 1.1;
@@ -78,12 +78,11 @@
         {...option}
         on:click={(e) => {
           selectedOption = option;
-          console.log(selectedOption)
           answer(e);
         }}
-        answered={selectedOption.breed === option.breed && hasAnswered}
+        answered={selectedOption.opt === option.opt && hasAnswered}
         disabled={hasAnswered}
-        registeredAnswer={currentAnswer.breed === option.breed &&
+        registeredAnswer={currentAnswer.opt === option.opt &&
           hasAnswered &&
           !currentAnswer.correct}
       />

@@ -32,11 +32,11 @@ const buildOptions = (correctImageUrl, data) => {
       };
     });
   const wrongOptions = wrongImages.map((img) => {
-    return { correct: false, breed: img.answer, imageUrl: img.imageUrl };
+    return { correct: false, opt: img.answer, imageUrl: img.imageUrl };
   });
   const correctOption = {
     correct: true,
-    breed: correctAnswer,
+    opt: correctAnswer,
     imageUrl: correctImageUrl,
   };
   const orderedOptions = [...wrongOptions, correctOption];

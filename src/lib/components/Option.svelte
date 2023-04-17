@@ -1,5 +1,5 @@
 <script>
-  export let breed, correct, answered, disabled, registeredAnswer;
+  export let opt, correct, answered, disabled, registeredAnswer;
   $: answeredClassName = correct ? "correct" : "wrong";
   $: answeredClass = answered ? answeredClassName : "";
   $: paintRight = disabled && correct ? "correct" : "";
@@ -12,7 +12,7 @@
   class:disabled
 >
   <span class="text">
-    {breed}
+    {opt}
   </span>
 </div>
 
