@@ -9,11 +9,12 @@ To install the library, run the following command:
 # Usage
 
 ## Text Quiz Component
+![alt text](TextQuiz.png)
 To use the Text Quiz component, import it and provide the data for the questions. The data should be formatted as an object with a "data" property that contains an array of question objects. Each question object should have an "answer" property and a "question" property.
 
 Here's an example:
 
-`
+```
 <script>
   import { TextQuiz } from "svelte-survey-test";
 
@@ -22,7 +23,7 @@ const textData: { data: string } = {"data": '[{"question":"What is the point of 
 </script>
 
 <TextQuiz data={textData} />
-`
+```
 
 ## Image Quiz Component
 To use the Image Quiz component, import it and provide the data for the questions. The data should be formatted as an object with a "data" property that contains an array of question objects. Each question object should have an "imageUrl" property, a "answer" property, and an "answer" property.
