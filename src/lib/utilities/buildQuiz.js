@@ -17,26 +17,26 @@ const preload = async (src) => {
 
 const buildOptions = (correctImageUrl, data) => {
   const allOptions = data;
-  const breeds = allOptions.map((img) => img.breed);
-  shuffle(breeds);
-  const uniqoptions = [...new Set(breeds)];
+  const answers = allOptions.map((img) => img.answer);
+  shuffle(answers);
+  const uniqoptions = [...new Set(answers)];
   const key = data.find((key) => key.image === correctImageUrl);
-  const correctBreed = key.breed;
+  const correctAnswer = key.answer;
   const wrongImages = uniqoptions
-    .filter((breed) => breed !== correctBreed)
+    .filter((answer) => answer !== correctAnswer)
     .splice(0, 3)
-    .map((breed) => {
+    .map((answer) => {
       return {
-        breed,
-        imageUrl: data.find((img) => img.breed === breed).img,
+        answer,
+        imageUrl: data.find((arr) => arr.answer === answer).img,
       };
     });
   const wrongOptions = wrongImages.map((img) => {
-    return { correct: false, breed: img.breed, imageUrl: img.img };
+    return { correct: false, breed: img.answer, imageUrl: img.imageUrl };
   });
   const correctOption = {
     correct: true,
-    breed: correctBreed,
+    breed: correctAnswer,
     imageUrl: correctImageUrl,
   };
   const orderedOptions = [...wrongOptions, correctOption];
@@ -73,7 +73,7 @@ const buildQuiz = async (data) => {
     updateGame();
   } catch (error) {
     console.error(`error while processing data: ${error}. retrying`);
-    reset();
+    // reset();
   }
 };
 

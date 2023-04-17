@@ -19,8 +19,12 @@
 
   const startGame = async () => {
     if (currentGame.isPlaying) {
-      console.log('reloading')
-      reloadGame();
+      numQ.set(numOfQuestions)
+      const parsedData = await JSON.parse(data.data);
+      imData.set(parsedData);
+      await guessImage(parsedData);
+      // console.log('reloading')
+      // reloadGame();
     } else {
       numQ.set(numOfQuestions)
       const parsedData = await JSON.parse(data.data);

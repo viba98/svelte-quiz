@@ -2,9 +2,9 @@
 import ImageQuiz from "../lib/components/ImageQuiz.svelte";
 import TextQuiz from "../lib/components/TextQuiz.svelte";
 
-// const imageData: { data: string } = {"data": '[{"image": "https://images.dog.ceo/breeds/poodle-miniature/n02113712_3203.jpg", "breed": "poodle" },{"image": "https://images.dog.ceo/breeds/chihuahua/n02085620_2650.jpg", "breed": "chihuahua"},{"image": "https://images.dog.ceo/breeds/hound-walker/n02089867_3177.jpg", "breed": "hound-walker"},{"image": "https://images.dog.ceo/breeds/spaniel-welsh/n02102177_707.jpg", "breed": "spaniel-welsh"}]'};
+const imageData: { data: string } = {"data": '[{"image": "https://images.dog.ceo/breeds/poodle-miniature/n02113712_3203.jpg", "answer": "poodle" },{"image": "https://images.dog.ceo/breeds/chihuahua/n02085620_2650.jpg", "answer": "chihuahua"},{"image": "https://images.dog.ceo/breeds/hound-walker/n02089867_3177.jpg", "answer": "hound-walker"},{"image": "https://images.dog.ceo/breeds/spaniel-welsh/n02102177_707.jpg", "answer": "spaniel-welsh"}]'};
 
-const textData: { data: string } = {"data": '[{"image":"https://images.dog.ceo/breeds/poodle-miniature/n02113712_3203.jpg","answer":"idfk","wrongOp1":"poodle","wrongOp2":"fsdf sdf s","wrongOp3":"fsdfsd fsd"},{"image":"https://images.dog.ceo/breeds/chihuahua/n02085620_2650.jpg","answer":"chihuahua","wrongOp1":"fsdfsdfs","wrongOp2":"poodle","wrongOp3":"fsdfsdfsd"},{"image":"https://images.dog.ceo/breeds/hound-walker/n02089867_3177.jpg","answer":"hound-walker","wrongOp1":"fsdfsdfsdf","wrongOp2":"poodle","wrongOp3":"fsdfsdfsdfs"},{"image":"https://images.dog.ceo/breeds/spaniel-welsh/n02102177_707.jpg","answer":"spaniel-welsh","wrongOp1":"poofsdfsdfdle","wrongOp2":"fsdfsdfs fsd fsd ","wrongOp3":"fsdfsd fsd f "}]'};
+// const textData: { data: string } = {"data": '[{"image":"https://images.dog.ceo/breeds/poodle-miniature/n02113712_3203.jpg","answer":"idfk","wrongOp1":"poodle","wrongOp2":"fsdf sdf s","wrongOp3":"fsdfsd fsd"},{"image":"https://images.dog.ceo/breeds/chihuahua/n02085620_2650.jpg","answer":"chihuahua","wrongOp1":"fsdfsdfs","wrongOp2":"poodle","wrongOp3":"fsdfsdfsd"},{"image":"https://images.dog.ceo/breeds/hound-walker/n02089867_3177.jpg","answer":"hound-walker","wrongOp1":"fsdfsdfsdf","wrongOp2":"poodle","wrongOp3":"fsdfsdfsdfs"},{"image":"https://images.dog.ceo/breeds/spaniel-welsh/n02102177_707.jpg","answer":"spaniel-welsh","wrongOp1":"poofsdfsdfdle","wrongOp2":"fsdfsdfs fsd fsd ","wrongOp3":"fsdfsd fsd f "}]'};
 </script>
 
 
@@ -29,8 +29,8 @@ const textData: { data: string } = {"data": '[{"image":"https://images.dog.ceo/b
     </script>
   </head>
   <body class="game">
-    <!-- <ImageQuiz data = {imageData} baseQuestion = "IDFK" title="Title"  numOfQuestions = {3}/> -->
-    <TextQuiz data = {textData} title="Title" numOfQuestions = {3}/>
+    <ImageQuiz data = {imageData} baseQuestion = "IDFK" title="Title"  numOfQuestions = {3}/>
+    <!-- <TextQuiz data = {textData} title="Title" numOfQuestions = {3}/> -->
   </body>
 </html>
 
