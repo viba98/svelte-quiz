@@ -3,7 +3,6 @@ import { updateGame, numberOfQuestions } from "./repository";
 import { shuffle } from "./helpers";
 
 function createOptions(obj) {
-  console.log("creating option")
   const image = obj.image
   const breed = obj.breed
   const wrongOp1 = obj.wrongOp1

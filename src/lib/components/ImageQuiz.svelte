@@ -2,7 +2,7 @@
   import { fade } from "svelte/transition";
   import { onMount } from "svelte";
   import { guessImage } from "../utilities/buildQuiz";
-  import { currentGame, reloadGame } from "../utilities/repository";
+  import { currentGame, reloadGame, numQ } from "../utilities/repository";
   import { loading, showStats } from "../store";
   import Result from "./Result.svelte";
   import Quiz from "./Quiz.svelte";
@@ -15,12 +15,14 @@
   export let data: { data: string } ;
   export let baseQuestion: string;
   export let title: string = "Quiz";
+  export let numOfQuestions;
 
   const startGame = async () => {
     if (currentGame.isPlaying) {
       console.log('reloading')
       reloadGame();
     } else {
+      numQ.set(numOfQuestions)
       const parsedData = await JSON.parse(data.data);
       imData.set(parsedData);
       await guessImage(parsedData);

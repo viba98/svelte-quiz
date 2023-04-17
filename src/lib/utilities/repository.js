@@ -1,14 +1,21 @@
-import { get } from "svelte/store";
+import { get, writable } from "svelte/store";
 import {
   quiz,
   quizIndex,
   answerIndex,
   rowIndex,
   isPlaying,
-  answers,
+  answers
 } from "../store";
 
-export const numberOfQuestions = 2; //max is 12
+export let numberOfQuestions; //max is 12
+
+export const numQ = writable(2);
+
+numQ.subscribe(value => {
+  numberOfQuestions = value;
+  console.log("numOfQuestions", numberOfQuestions)
+})
 
 const defaultStreaks = [...Array(numberOfQuestions + 1).keys()].map((v) => {
   return { number: v, value: 0 };

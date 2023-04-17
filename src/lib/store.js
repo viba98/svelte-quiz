@@ -21,6 +21,8 @@ export const timeout = writable(false);
 export const showStats = writable(false);
 export const imData = writable([{}]);
 
+console.log("numberOfQ from store", numberOfQuestions)
+
 export let autoNext = () => {
   timeout.set(true);
   setTimeout(goToNext, 1500);
